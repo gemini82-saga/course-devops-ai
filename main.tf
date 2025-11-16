@@ -207,7 +207,7 @@ resource "aws_iam_role_policy" "apprunner_secrets" {
 # App Runner 服务
 resource "aws_apprunner_service" "rag_app_service" {
   count = var.manage_apprunner_via_terraform ? 1 : 0
-  service_name = "bee-edu-rag-service"
+  service_name = "jason-service-demo"
   
   source_configuration {
     authentication_configuration {

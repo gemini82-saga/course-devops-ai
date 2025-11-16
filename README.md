@@ -30,7 +30,7 @@ TF_VAR_manage_apprunner_via_terraform=true TF_VAR_github_org_or_user=<github_use
 - name: Deploy to App Runner
   uses: awslabs/amazon-app-runner-deploy@main
   with:
-    service: bee-edu-rag-service
+    service: jason-service-demo
     image: ${{ steps.ecr-login.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ env.TAG }}
     region: ${{ env.AWS_REGION }}
     access-role-arn: ${{ env.APP_RUNNER_ACCESS_ROLE_ARN }}
